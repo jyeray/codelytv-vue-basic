@@ -1,6 +1,6 @@
 <template>
   <div v-if="isLoading" class="spinner">
-    <p>Loading...</p>
+    <q-spinner/>
   </div>
 </template>
 

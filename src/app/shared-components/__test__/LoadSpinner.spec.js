@@ -5,12 +5,12 @@ describe('LoadSpinner.vue', () => {
 
   it('shows loading', () => {
     const wrapper = Wrap(LoadSpinner).withProps({ isLoading: false }).mount()
-    expect(wrapper.text()).not.toContain('Loading...')
+    expect(wrapper.html()).toBeUndefined()
   })
 
   it('does not show loading', () => {
     const wrapper = Wrap(LoadSpinner).withProps({ isLoading: true }).mount()
-
-    expect(wrapper.text()).toContain('Loading...')
+    console.log(wrapper.html())
+    expect(wrapper.html()).toContain('q-spinner')
   })
 })
